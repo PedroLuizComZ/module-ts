@@ -1,0 +1,144 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Ts Documentation",
+		"description": "This is an TS API",
+		"version": "1.0.0"
+	},
+	"paths": {
+		"/categories": {
+			"post": {
+				"tags": ["Category"],
+				"summary": "Create a Category",
+				"description": "Create a new Category",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"name": "Category Name",
+								"description": "Category description"
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"get": {
+				"tags": ["Category"],
+				"summary": "List Category",
+				"description": "List all Category",
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"description": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/specification": {
+			"post": {
+				"tags": ["Specification"],
+				"summary": "Create a Specification",
+				"description": "Create a new Specification",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"name": "Specification Name",
+								"description": "Specification description"
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"get": {
+				"tags": ["Specification"],
+				"summary": "List Specification",
+				"description": "List all Specifications",
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"description": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		}
+	}
+}
